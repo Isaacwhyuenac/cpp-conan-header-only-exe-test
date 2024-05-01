@@ -16,7 +16,7 @@ include_directories(${core_build_include_dirs})
 string(REPLACE ";" "$<SEMICOLON>" dirs "${core_build_include_dirs}")
 
 add_library(core ${SOURCES})
-add_library(test_foundation::core ALIAS core)
+add_library(my_algorithm::core ALIAS core)
 
 #target_include_directories(core PUBLIC include)
 

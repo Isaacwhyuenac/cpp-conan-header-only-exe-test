@@ -8,7 +8,7 @@ file(GLOB HEADERS include/*.h include/**/*.h)
 message(STATUS "HEADERS: ${HEADERS}")
 
 add_library(common INTERFACE)
-add_library(test_foundation::common ALIAS common)
+add_library(my_algorithm::common ALIAS common)
 
 target_link_libraries(common INTERFACE spdlog::spdlog)
 
