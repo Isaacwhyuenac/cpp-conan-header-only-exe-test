@@ -56,13 +56,12 @@ class my_algorithmRecipe(ConanFile):
     def package_info(self):
         # self.cpp_info.libs = ["my_algorithm"]
         self.cpp_info.components["common"].libs = ["common"]
-        # self.cpp_info.components["common"].requires = ["core"]
-        # self.cpp_info.components["common"].set_property("cmake_target_aliases", ["atom_foundation::common"])
+        self.cpp_info.components["common"].set_property("cmake_target_aliases", ["test_foundation::common"])
         self.cpp_info.components["common"].set_property("cmake_target_name", "common")
         self.cpp_info.components["common"].bindirs = []
         self.cpp_info.components["common"].libdirs = []
 
         self.cpp_info.components["core"].libs = ["core"]
         self.cpp_info.components["core"].requires = ["common"]
-        # self.cpp_info.components["core"].set_property("cmake_target_aliases", ["atom_foundation::core"])
+        self.cpp_info.components["core"].set_property("cmake_target_aliases", ["test_foundation::core"])
         self.cpp_info.components["core"].set_property("cmake_target_name", "core")
