@@ -5,10 +5,11 @@
 #ifndef MY_ALGORITHM_ALGORITHM_H
 #define MY_ALGORITHM_ALGORITHM_H
 
-//#include <spdlog/spdlog.h>
+#include <spdlog/spdlog.h>
+#include <fmt/format.h>
 
 inline int add(int a, int b) {
-//    spdlog::info("Adding {} and {}", a, b);
+    spdlog::info("Adding {} and {}", a, b);
     return a + b;
 }
 

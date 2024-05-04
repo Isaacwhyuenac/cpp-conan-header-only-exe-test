@@ -1,12 +1,15 @@
-#include "my_algorithm.h"
-#include <vector>
-#include <string>
+#include <iostream>
+//#include "core/core_algorithm.h"
+//#include "common/algorithm.h"
 
 int main() {
-    my_algorithm();
 
-    std::vector<std::string> vec;
-    vec.push_back("test_package");
-
-    my_algorithm_print_vector(vec);
+//    std::cout << "Add 2 + 3 = " << add(2, 3) << std::endl;
+//    std::cout << "Multiply 2 * 3 = " << multiply(2, 3) << std::endl;
+//    my_algorithm();
+//
+//    std::vector<std::string> vec;
+//    vec.push_back("test_package");
+//
+//    my_algorithm_print_vector(vec);
 }
