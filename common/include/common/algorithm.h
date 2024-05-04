@@ -6,7 +6,7 @@
 #define MY_ALGORITHM_ALGORITHM_H
 
 #include <spdlog/spdlog.h>
-#include <fmt/format.h>
+//#include <fmt/format.h>
 
 inline int add(int a, int b) {
     spdlog::info("Adding {} and {}", a, b);
