@@ -24,8 +24,8 @@ class my_algorithmRecipe(ConanFile):
     exports_sources = "CMakelists.txt", "common/*", "core/*"
 
     def requirements(self):
-        self.requires("spdlog/1.14.0")
-        self.requires("fmt/10.2.1")
+        self.requires("spdlog/1.14.0", transitive_headers=True)
+        self.requires("fmt/10.2.1", transitive_headers=True)
 
     def config_options(self):
         if self.settings.os == "Windows":

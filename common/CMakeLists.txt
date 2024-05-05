@@ -11,11 +11,13 @@ FILE(GLOB HEADERS include/*.h include/**/*.h)
 add_library(common INTERFACE)
 add_library(my_algorithm::common ALIAS common)
 
-target_link_libraries(common INTERFACE fmt::fmt spdlog::spdlog)
+message(STATUS "HEADERS: ${HEADERS}")
 
 target_include_directories(
-        common INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        common INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include> ##
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
+
+target_link_libraries(common INTERFACE fmt::fmt spdlog::spdlog)
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file("${PROJECT_NAME}ConfigVersion.cmake"
