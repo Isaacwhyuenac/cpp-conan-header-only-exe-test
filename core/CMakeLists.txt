@@ -18,6 +18,7 @@ string(REPLACE ";" "$<SEMICOLON>" dirs "${core_build_include_dirs}")
 add_library(core ${SOURCES})
 add_library(my_algorithm::core ALIAS core)
 
+target_link_libraries(core PUBLIC common)
 #target_include_directories(core PUBLIC include)
 
 message("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
